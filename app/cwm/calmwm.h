@@ -418,6 +418,7 @@ void			 client_unhide(struct client_ctx *);
 void			 client_urgency(struct client_ctx *);
 void 			 client_vtile(struct client_ctx *);
 void 			 client_vleft(struct client_ctx *);
+void 			 client_vright(struct client_ctx *);
 void			 client_wm_hints(struct client_ctx *);
 
 void			 group_alltoggle(struct screen_ctx *);
@@ -478,6 +479,7 @@ void			 kbfunc_client_toggle_vmaximize(void *, struct cargs *);
 void 			 kbfunc_client_htile(void *, struct cargs *);
 void 			 kbfunc_client_vtile(void *, struct cargs *);
 void 			 kbfunc_client_vleft(void *, struct cargs *);
+void 			 kbfunc_client_vright(void *, struct cargs *);
 void			 kbfunc_client_cycle(void *, struct cargs *);
 void			 kbfunc_client_toggle_group(void *, struct cargs *);
 void			 kbfunc_client_movetogroup(void *, struct cargs *);

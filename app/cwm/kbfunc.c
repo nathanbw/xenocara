@@ -229,6 +229,12 @@ kbfunc_client_vleft(void *ctx, struct cargs *cargs)
 }
 
 void
+kbfunc_client_vright(void *ctx, struct cargs *cargs)
+{
+	client_vright(ctx);
+}
+
+void
 kbfunc_client_cycle(void *ctx, struct cargs *cargs)
 {
 	client_cycle(ctx, cargs->flag);

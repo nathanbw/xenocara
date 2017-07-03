@@ -1092,7 +1092,6 @@ client_vtile(struct client_ctx *cc)
 void
 client_vleft(struct client_ctx *cc)
 {
-	struct client_ctx	*ci;
 	struct screen_ctx 	*sc = cc->sc;
 	struct geom 		 area;
 
@@ -1102,6 +1101,25 @@ client_vleft(struct client_ctx *cc)
 
 	cc->flags &= ~CLIENT_VMAXIMIZED;
 	cc->geom.x = area.x;
+	cc->geom.y = area.y;
+	cc->geom.w = (area.w - (cc->bwidth * 2)) / 2;
+	cc->geom.h = area.h - (cc->bwidth * 2);
+	client_resize(cc, 1);
+	client_ptrwarp(cc);
+}
+
+void
+client_vright(struct client_ctx *cc)
+{
+	struct screen_ctx 	*sc = cc->sc;
+	struct geom 		 area;
+
+	area = screen_area(sc,
+	    cc->geom.x + cc->geom.w / 2,
+	    cc->geom.y + cc->geom.h / 2, CWM_GAP);
+
+	cc->flags &= ~CLIENT_VMAXIMIZED;
+	cc->geom.x = area.w / 2; /* Unsure if area.w is correct here */
 	cc->geom.y = area.y;
 	cc->geom.w = (area.w - (cc->bwidth * 2)) / 2;
 	cc->geom.h = area.h - (cc->bwidth * 2);
