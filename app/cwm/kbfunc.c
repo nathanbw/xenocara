@@ -223,6 +223,12 @@ kbfunc_client_vtile(void *ctx, struct cargs *cargs)
 }
 
 void
+kbfunc_client_vleft(void *ctx, struct cargs *cargs)
+{
+	client_vleft(ctx);
+}
+
+void
 kbfunc_client_cycle(void *ctx, struct cargs *cargs)
 {
 	client_cycle(ctx, cargs->flag);

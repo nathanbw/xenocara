@@ -67,6 +67,7 @@ static const struct {
 	{ "window-delete", kbfunc_client_delete, CWM_CONTEXT_CC, 0 },
 	{ "window-htile", kbfunc_client_htile, CWM_CONTEXT_CC, 0 },
 	{ "window-vtile", kbfunc_client_vtile, CWM_CONTEXT_CC, 0 },
+	{ "window-vleft", kbfunc_client_vleft, CWM_CONTEXT_CC, 0 },
 	{ "window-stick", kbfunc_client_toggle_sticky, CWM_CONTEXT_CC, 0 },
 	{ "window-fullscreen", kbfunc_client_toggle_fullscreen, CWM_CONTEXT_CC, 0 },
 	{ "window-maximize", kbfunc_client_toggle_maximize, CWM_CONTEXT_CC, 0 },
